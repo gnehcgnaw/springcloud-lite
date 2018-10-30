@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.wangc</groupId>
+	<artifactId>spring-cloud-microservice-example</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>springcloud-lite</name>
+	<description>Demo project for Spring Boot</description>
+
+	<developers>
+		<developer>
+			<name>wangc</name>
+			<url>/</url>
+			<email>gnehcgnaw@gmail.com</email>
+		</developer>
+	</developers>
+
+	<modules>
+		<module>eureka-server</module>
+		<module>config-server</module>
+		<module>provider</module>
+		<module>api</module>
+		<module>hystrix-turbine</module>
+		<module>getway-zuul-proxy</module>
+		<module>consumer</module>
+		<module>zipkin-server</module>
+	</modules>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.16.RELEASE</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+		<spring-cloud.version>Edgware.SR4</spring-cloud.version>
+		<user-api.version>0.0.1-SNAPSHOT</user-api.version>
+		<provider-user-service.version>0.0.1-SNAPSHOT</provider-user-service.version>
+		<logstash-logback-encoder.version>4.6</logstash-logback-encoder.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>com.wangc.api</groupId>
+				<artifactId>user-api</artifactId>
+				<version>${user-api.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.wangc.provider</groupId>
+				<artifactId>provider-user-service</artifactId>
+				<version>${provider-user-service.version}</version>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+				<scope>provided</scope>
+			</dependency>
+
+			<!--面向logstash的日志输出，将日志转化为json格式-->
+			<dependency>
+				<groupId>net.logstash.logback</groupId>
+				<artifactId>logstash-logback-encoder</artifactId>
+				<version>${logstash-logback-encoder.version}</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+	<!--有些model不需要spring-boot-maven-plugin，所以在最大的parent中注释了这都代码-->
+	<!--<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>-->
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
