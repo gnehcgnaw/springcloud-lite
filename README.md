@@ -31,3 +31,6 @@ echo "kafka start !"
 
 * 访问地址：http://localhost:8888/hystrix.stream ，然后在输入框中填写：http://localhost:8888/trubine.stream
 
+9.在项目运行的时候会产生一个build文件夹和configs文件夹，build文件是项目运行的日志信息，生产到统一个文件夹并且以json的形式存储是为了方便日后使用ELK，也就是说只要你使用了ELK只需要将这个文件夹导入就能实现日志的统一管理；而configs是拉取的配置文件。
+
+
