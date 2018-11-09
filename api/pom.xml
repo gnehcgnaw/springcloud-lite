@@ -16,7 +16,7 @@
     </modules>
    <parent>
        <groupId>com.wangc</groupId>
-       <artifactId>spring-cloud-microservice-example</artifactId>
+       <artifactId>springcloud-list</artifactId>
        <version>0.0.1-SNAPSHOT</version>
    </parent>
 
