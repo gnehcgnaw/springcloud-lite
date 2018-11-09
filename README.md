@@ -12,11 +12,11 @@ echo "kafka start !"
 
 因为在配置文件中配置了hostname，所以需要在hosts文件中添加peer1、peer2、peer3的地址映射，例：127.0.0.1   peer1;
 
-![application-peer文件部分配置](https://gnehcgnaw.oss-cn-hongkong.aliyuncs.com/Xnip2018-11-09_16-01-36.png?Expires=1541754654&OSSAccessKeyId=TMP.AQHb1xvd75kgAt1j6C0lHQuUvg6o7fptNCNYKWhOSnyXi4ZiazfYR_Q14UIwADAtAhQIIgW2TRJ70wgFljXxoFPLYhrHDQIVAL0l_CtKSQ99uQTjq2pP7HK_kmHm&Signature=jNNTOg%2BYRuO7nPL0UqupMZS8Srk%3D)
+![application-peer文件部分配置](https://gnehcgnaw.oss-cn-hongkong.aliyuncs.com/Xnip2018-11-09_16-01-36.png)
 
 如果配置地址IP的映射会出现以下问题：
 
-![不配置IP映射，会出现的问题](https://gnehcgnaw.oss-cn-hongkong.aliyuncs.com/Xnip2018-11-09_16-00-43.png?Expires=1541754925&OSSAccessKeyId=TMP.AQHb1xvd75kgAt1j6C0lHQuUvg6o7fptNCNYKWhOSnyXi4ZiazfYR_Q14UIwADAtAhQIIgW2TRJ70wgFljXxoFPLYhrHDQIVAL0l_CtKSQ99uQTjq2pP7HK_kmHm&Signature=x0NwtVyCulPrYiAH7pnLM8Dd1RA%3D)
+![不配置IP映射，会出现的问题](https://gnehcgnaw.oss-cn-hongkong.aliyuncs.com/Xnip2018-11-09_16-00-43.png)
 
 3.启动config-server,
 
