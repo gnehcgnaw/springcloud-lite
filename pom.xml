@@ -5,7 +5,7 @@
 
 	<groupId>com.wangc</groupId>
 	<artifactId>springcloud-list</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>${spring-list.version}</version>
 	<packaging>pom</packaging>
 
 	<name>springcloud-lite</name>
@@ -28,6 +28,7 @@
 		<module>getway-zuul-proxy</module>
 		<module>consumer</module>
 		<module>zipkin-server</module>
+		<module>cloud-monitor</module>
 	</modules>
 
 	<parent>
@@ -38,13 +39,16 @@
 	</parent>
 
 	<properties>
+		<spring-list.version>0.0.1-SNAPSHOT</spring-list.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Edgware.SR4</spring-cloud.version>
 		<user-api.version>0.0.1-SNAPSHOT</user-api.version>
 		<provider-user-service.version>0.0.1-SNAPSHOT</provider-user-service.version>
-		<logstash-logback-encoder.version>4.6</logstash-logback-encoder.version>
+		<mybatis.version>1.3.2</mybatis.version>
+		<mysql.verison>5.1.47</mysql.verison>
+		<druid.version>1.1.12</druid.version>
 	</properties>
 
 	<dependencyManagement>
@@ -75,11 +79,25 @@
 				<scope>provided</scope>
 			</dependency>
 
-			<!--面向logstash的日志输出，将日志转化为json格式-->
+			<!--mybatis-->
 			<dependency>
-				<groupId>net.logstash.logback</groupId>
-				<artifactId>logstash-logback-encoder</artifactId>
-				<version>${logstash-logback-encoder.version}</version>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
+			<!--mysql-->
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.version}</version>
+				<scope>runtime</scope>
+			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid.version}</version>
 			</dependency>
 
 		</dependencies>
