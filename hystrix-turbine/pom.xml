@@ -5,7 +5,7 @@
 
 	<groupId>com.wangc</groupId>
 	<artifactId>hystrix-turbine</artifactId>
-	<version>2.0</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>hystrix-turbine</name>
@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>com.wangc</groupId>
 		<artifactId>springcloud-list</artifactId>
-		<version>2.0</version>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
 

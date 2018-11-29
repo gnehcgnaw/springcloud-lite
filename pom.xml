@@ -5,7 +5,7 @@
 
 	<groupId>com.wangc</groupId>
 	<artifactId>springcloud-list</artifactId>
-	<version>2.0</version>
+	<version>${spring-list.version}</version>
 	<packaging>pom</packaging>
 
 	<name>springcloud-lite</name>
@@ -35,11 +35,11 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.16.RELEASE</version>
-
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
 	<properties>
+		<spring-list.version>0.0.1-SNAPSHOT</spring-list.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
@@ -48,7 +48,7 @@
 		<provider-user-service.version>0.0.1-SNAPSHOT</provider-user-service.version>
 		<mybatis.version>1.3.2</mybatis.version>
 		<mysql.verison>5.1.47</mysql.verison>
-		<druid.version>1.1.10</druid.version>
+		<druid.version>1.1.12</druid.version>
 	</properties>
 
 	<dependencyManagement>
@@ -78,11 +78,6 @@
 				<version>${lombok.version}</version>
 				<scope>provided</scope>
 			</dependency>
-			<dependency>
-				<groupId>com.alibaba</groupId>
-				<artifactId>druid-spring-boot-starter</artifactId>
-				<version>${druid.version}</version>
-			</dependency>
 
 			<!--mybatis-->
 			<dependency>
@@ -97,6 +92,14 @@
 				<version>${mysql.version}</version>
 				<scope>runtime</scope>
 			</dependency>
+
+			<!-- https://mvnrepository.com/artifact/com.alibaba/druid -->
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid.version}</version>
+			</dependency>
+
 		</dependencies>
 	</dependencyManagement>
 	<!--有些model不需要spring-boot-maven-plugin，所以在最大的parent中注释了这都代码-->
