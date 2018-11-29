@@ -18,7 +18,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @Service
 public class InMemoryUserService implements UserService {
 
-    private Map<String,User> repository = new ConcurrentHashMap<>();
+    private Map<String, User> repository = new ConcurrentHashMap<>();
     @Override
     public boolean saveUser(User user) {
          return repository.put(user.getUserId(),user) == null ;
