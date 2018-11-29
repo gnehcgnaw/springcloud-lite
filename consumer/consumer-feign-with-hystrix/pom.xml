@@ -5,7 +5,7 @@
 
 	<groupId>com.wangc</groupId>
 	<artifactId>consumer-feign-with-hystrix</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>2.0</version>
 	<packaging>jar</packaging>
 
 	<name>consumer-feign-with-hystrix</name>
@@ -14,7 +14,7 @@
 	<parent>
 		<groupId>com.wangc</groupId>
 		<artifactId>consumer</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>2.0</version>
 	</parent>
 	<dependencies>
 		<!--fegin的fallbacke不需要此依赖，但是为了hystrix的监控，需要添加此依赖，并使用@EnableCircuitBreaker开启hystrix-->
