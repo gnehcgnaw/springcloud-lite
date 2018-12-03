@@ -5,7 +5,7 @@
 
 	<groupId>com.wangc</groupId>
 	<artifactId>eureka-server</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>2.0</version>
 	<packaging>jar</packaging>
 
 	<name>eureka-server</name>
@@ -14,10 +14,18 @@
 	<parent>
 		<groupId>com.wangc</groupId>
 		<artifactId>springcloud-list</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>2.0</version>
 	</parent>
 
 	<dependencies>
+		<!--修订版依赖....................开始-->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+		</dependency>
+
+		<!--修订版依赖....................结束-->
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
@@ -26,10 +34,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-eureka-server</artifactId>
 		</dependency>
 
 		<dependency>
@@ -59,6 +63,23 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+	<!--多环境-->
+	<profiles>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<profileActive>dev</profileActive>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>pro</id>
+			<properties>
+				<profileActive>pro</profileActive>
+			</properties>
+		</profile>
+	</profiles>
 
 </project>
