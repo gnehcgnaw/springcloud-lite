@@ -10,7 +10,8 @@
 
     <name>api</name>
     <modules>
-        <module>user-api</module>
+        <module>provider-user-api</module>
+        <module>provider-order-api</module>
     </modules>
     <description>Demo project for Spring Boot</description>
     <parent>
@@ -18,9 +19,13 @@
         <artifactId>springcloud-list</artifactId>
         <version>2.0</version>
     </parent>
+
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
     </properties>
+
+
 </project>
