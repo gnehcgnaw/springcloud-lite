@@ -2,6 +2,7 @@ package com.wangc.hystrixturbine;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
@@ -14,7 +15,7 @@ import org.springframework.cloud.netflix.turbine.EnableTurbine;
  */
 
 @EnableHystrixDashboard
-@EnableTurbine		//如果使用的是MQ方式需要使用@@EnableTurbineStream注解
+@EnableTurbine
 @EnableDiscoveryClient
 @SpringBootApplication
 public class HystrixTurbineApplication {
