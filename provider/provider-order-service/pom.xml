@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.wangc</groupId>
-    <artifactId>provider-user-service</artifactId>
+    <artifactId>provider-order-service</artifactId>
     <version>2.0</version>
     <packaging>jar</packaging>
 
-    <name>provider-user-service</name>
+    <name>provider-order-service</name>
     <description>Demo project for Spring Boot</description>
 
     <parent>
@@ -81,10 +81,7 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-jdbc</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
@@ -101,15 +98,21 @@
         </dependency>
 
         <dependency>
+            <groupId>com.wangc</groupId>
+            <artifactId>provider-order-api</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.jolokia</groupId>
             <artifactId>jolokia-core</artifactId>
         </dependency>
 
-
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
-
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
@@ -142,11 +145,5 @@
                 <profileActive>pro</profileActive>
             </properties>
         </profile>
-
-
     </profiles>
-
-    <!-- 如果不添加此节点mybatis的mapper.xml文件都会被漏掉。 -->
-
-
 </project>
