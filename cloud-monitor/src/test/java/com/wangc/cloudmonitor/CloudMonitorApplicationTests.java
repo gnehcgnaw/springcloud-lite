@@ -1,4 +1,4 @@
-package com.wangc;
+package com.wangc.cloudmonitor;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
