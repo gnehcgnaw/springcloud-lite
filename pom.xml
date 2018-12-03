@@ -20,16 +20,23 @@
 	</developers>
 
 	<modules>
+		<!--注册中心-->
 		<module>eureka-server</module>
+		<!--配置中心-->
 		<module>config-server</module>
+		<!--服务模块-->
 		<module>provider</module>
+		<!--对外FeginClient接口和共用JavaBean-->
 		<module>api</module>
+		<!--服务熔断检测系统-->
 		<module>hystrix-turbine</module>
+		<!--网关-->
 		<module>getway-zuul-proxy</module>
-		<!--监控-->
+		<!--spring-boot-admin监控-->
 		<module>cloud-monitor</module>
 		<!--代码生成器-->
 		<module>generator</module>
+		<!--授权认证和资源服务器-->
 		<module>oauth2</module>
 	</modules>
 
@@ -84,7 +91,7 @@
 				<version>${project.version}</version>
 			</dependency>
 
-			<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+			<!--lombok -->
 			<dependency>
 				<groupId>org.projectlombok</groupId>
 				<artifactId>lombok</artifactId>
@@ -128,15 +135,6 @@
 
 
 	</dependencyManagement>
-	<!--有些model不需要spring-boot-maven-plugin，所以在最大的parent中注释了这都代码-->
-	<!--<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
-		</plugins>
-	</build>-->
 	<build>
 		<plugins>
 			<plugin>

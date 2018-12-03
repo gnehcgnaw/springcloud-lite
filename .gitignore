@@ -1,3 +1,10 @@
 # Created by .ignore support plugin (hsz.mobi)
 Would skip repository configs/
 oauth2/src/main/resources/static/
+api/provider-order-api/target/
+api/provider-user-api/target/
+config-server/target/
+generator/provider-order-generator/target/
+getway-zuul-proxy/target/
+hystrix-turbine/target/
+oauth2/target/
