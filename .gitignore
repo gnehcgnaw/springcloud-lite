@@ -1,3 +1,14 @@
 !/.gitignore
 .idea
 *.iml
+cloud-monitor/target
+api/provider-order-api/target
+api/provider-user-api/target
+config-server/target
+eureka-server/target
+generator/provider-order-generator/target
+oauth2/target
+provider/provider-order-service/target
+provider/provider-user-service/target
+hystrix-turbine/target
+getway-zuul-proxy/target
