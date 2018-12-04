@@ -17,6 +17,7 @@
         <version>2.0</version>
     </parent>
     <dependencies>
+
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
