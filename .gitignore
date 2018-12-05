@@ -12,3 +12,4 @@ provider/provider-order-service/target
 provider/provider-user-service/target
 hystrix-turbine/target
 getway-zuul-proxy/target
+/build
